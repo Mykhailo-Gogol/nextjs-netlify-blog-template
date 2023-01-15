@@ -109,7 +109,3 @@ a {
     color-scheme: dark;
   }
 }
-
-body {
-  @apply bg-white;
-}
