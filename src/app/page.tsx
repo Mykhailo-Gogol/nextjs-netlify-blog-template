@@ -18,20 +18,21 @@ export default async function Home() {
     <div className="app-wrapper">
       <h1 className="app-title">loggest</h1>
       {posts.map((post) => (
-        <div className="app-post">
+        <div className="app-post" key={post.sys.id}>
           <h1>{post.fields.title}</h1>
           {post.fields.image.map((image) => (
             <Image
-              key={post.sys.id}
+              key={image.sys.id}
               src={'https:' + image.fields.file.url}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
+              alt={image.fields.title}
             />
           ))}
         </div>
       ))}
 
-      <pre>{JSON.stringify(posts, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
     </div>
   )
 }
