@@ -1,0 +1,11 @@
+.app-post {
+  @apply py-2 px-4 drop-shadow-xl;
+}
+
+.app-post__title {
+  @apply font-bold text-2xl mb-2 truncate;
+}
+
+.app-post__image {
+  @apply h-40 overflow-hidden object-cover;
+}

@@ -1,38 +1,28 @@
 import './page.css'
 
-import client from '../api/contentful'
+import client from '@/api/contentful'
+import { ContentType, PostType } from '@/api/contentfulTypes'
 
-import Image from 'next/image'
+import { Post } from '@/components/Post'
 
 async function getData() {
-  const res = await client.getEntries({
-    content_type: 'post',
+  const res = await client.getEntries<PostType>({
+    content_type: ContentType.POST,
   })
   return res.items
 }
+export const revalidate = 60
 
 export default async function Home() {
   const posts = await getData()
 
   return (
     <div className="app-wrapper">
-      <h1 className="app-title">loggest</h1>
-      {posts.map((post) => (
-        <div className="app-post" key={post.sys.id}>
-          <h1>{post.fields.title}</h1>
-          {post.fields.image.map((image) => (
-            <Image
-              key={image.sys.id}
-              src={'https:' + image.fields.file.url}
-              width={image.fields.file.details.image.width}
-              height={image.fields.file.details.image.height}
-              alt={image.fields.title}
-            />
-          ))}
-        </div>
-      ))}
-
-      {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
+      <div className="app-posts">
+        {posts.map((post) => (
+          <Post key={post.sys.id} post={post} />
+        ))}
+      </div>
     </div>
   )
 }

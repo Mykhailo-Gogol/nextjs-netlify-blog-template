@@ -1,9 +1,11 @@
-import { EntryFields, Asset, EntryCollection } from 'contentful'
+import { EntryFields, Asset } from 'contentful'
 
-export type TPost = {
-  image: Asset
+export type PostType = {
+  image: Asset[]
   title: EntryFields.Text
   slug: EntryFields.Text
 }
 
-export type TPosts = EntryCollection<TPost>
+export enum ContentType {
+  POST = 'post',
+}
