@@ -7,7 +7,7 @@
 }
 
 .app-post__cta {
-  @apply absolute bottom-2 py-2 px-4 text-center bg-white hover:text-purple-400;
+  @apply absolute w-1/2 bottom-2 py-2 px-4 text-center bg-white hover:text-purple-400;
 }
 
 .app-post__image {

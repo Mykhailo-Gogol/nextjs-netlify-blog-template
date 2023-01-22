@@ -1,5 +1,9 @@
 .app-product {
-  @apply py-2 px-4 drop-shadow-sm hover:drop-shadow-xl bg-white bg-opacity-50 backdrop-blur;
+  @apply drop-shadow-sm hover:drop-shadow-xl bg-white bg-opacity-50 backdrop-blur;
+}
+
+.app-product__content {
+  @apply p-4;
 }
 
 .app-product__title {
@@ -15,5 +19,5 @@
 }
 
 .app-product__cta {
-  @apply py-2 px-4 text-center bg-white hover:text-purple-400;
+  @apply w-full md:w-1/2 py-2 px-4 text-center bg-white hover:text-purple-400;
 }

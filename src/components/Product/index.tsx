@@ -19,9 +19,11 @@ export const Product = ({ product }: ProductPropsType) => {
         className="app-product__image"
       />
 
-      <h1 className="app-product__title">{product.fields.title}</h1>
-      <p className="app-product__description">{product.fields.description}</p>
-      <button className="app-product__cta">{product.fields.cta}</button>
+      <div className="app-product__content">
+        <h1 className="app-product__title">{product.fields.title}</h1>
+        <p className="app-product__description">{product.fields.description}</p>
+        <button className="app-product__cta">{product.fields.cta}</button>
+      </div>
 
       {/* <pre>{JSON.stringify(product, null, 2)}</pre> */}
     </div>

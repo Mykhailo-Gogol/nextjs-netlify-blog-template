@@ -1,26 +1,23 @@
 .app-leading {
-  @apply relative drop-shadow-xl mb-10;
-  @apply before:content-[''] before:absolute before:inset-0 before:bg-black before:bg-opacity-50 hover:before:bg-opacity-60;
+  @apply relative grid grid-cols-1 md:grid-cols-2 items-center drop-shadow-xl;
 }
 
 .app-leading__content {
-  @apply absolute p-2 lg:p-5;
+  @apply p-4 lg:p-5 absolute bottom-2 md:static text-white md:text-black;
 }
 
 .app-leading__title {
-  @apply font-bold text-3xl mb-2 truncate text-white;
+  @apply font-bold text-3xl mb-2 truncate;
 }
 
-.app-leading__subtitle {
-  @apply my-2 text-white;
-}
-
-.app-leading__description {
-  @apply my-2 text-white;
+.app-leading__subtitle,
+.app-leading__description,
+.app-leading__cta {
+  @apply my-2;
 }
 
 .app-leading__cta {
-  @apply transform md:w-1/2 lg:w-1/3 p-2 text-center bg-white hover:bg-purple-400;
+  @apply transform w-1/2 py-2 px-4 lg:w-1/3 text-center text-black bg-white hover:bg-purple-400;
 }
 
 .app-leading__image {

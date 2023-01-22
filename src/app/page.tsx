@@ -42,7 +42,7 @@ async function getReviews() {
   return reviews.items
 }
 
-export const revalidate = 60
+export const revalidate = 3600
 
 export default async function Home() {
   const posts = await getPosts()
@@ -52,7 +52,9 @@ export default async function Home() {
 
   return (
     <div className="app-wrapper">
-      <Leading leading={leading} />
+      <div className="app-wrapper__template leading">
+        <Leading leading={leading} />
+      </div>
 
       <div className="app-wrapper__template products">
         {products.map((product) => (

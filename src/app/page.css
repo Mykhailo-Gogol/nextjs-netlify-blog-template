@@ -1,13 +1,5 @@
-.app-wrapper {
-  @apply mx-auto p-4 lg:p-8;
-
-  @screen lg {
-    width: 90vw;
-  }
-}
-
 .app-wrapper__template {
-  @apply grid gap-5 mb-20;
+  @apply grid gap-5 mb-20 mx-auto p-4 lg:p-0;
 
   &.products,
   &.reviews {
@@ -20,5 +12,13 @@
 
   &.reviews {
     @apply overflow-x-auto;
+  }
+
+  &.leading {
+    @apply p-0;
+  }
+
+  @screen lg {
+    width: 90vw;
   }
 }
