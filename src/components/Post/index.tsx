@@ -1,6 +1,7 @@
 import './post.css'
-import { PostType } from '@/api/contentfulTypes'
+
 import { Entry } from 'contentful'
+import { PostType } from '@/api/contentfulTypes'
 
 import Image from 'next/image'
 
@@ -10,6 +11,10 @@ export const Post = ({ post }: PostPropsType) => {
   return (
     <div className="app-post">
       <h1 className="app-post__title">{post.fields.title}</h1>
+      {post.fields.cta ? (
+        <button className="app-post__cta">{post.fields.cta}</button>
+      ) : null}
+
       {post.fields.image.map((image) => (
         <Image
           key={image.sys.id}

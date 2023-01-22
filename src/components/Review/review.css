@@ -1,0 +1,19 @@
+.app-review {
+  @apply p-4 drop-shadow-xl bg-white bg-opacity-80 rounded-xl;
+}
+
+.app-review__title {
+  @apply text-xl mb-2 truncate;
+}
+
+.app-review__author {
+  @apply font-light my-2 text-gray-400;
+}
+
+.app-review__description {
+  @apply text-opacity-50 my-2;
+}
+
+.app-review__points {
+  @apply inline-block p-1 px-2 bg-yellow-200 font-mono;
+}

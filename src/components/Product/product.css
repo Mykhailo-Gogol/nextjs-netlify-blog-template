@@ -1,0 +1,19 @@
+.app-product {
+  @apply py-2 px-4 drop-shadow-sm hover:drop-shadow-xl bg-white bg-opacity-50 backdrop-blur;
+}
+
+.app-product__title {
+  @apply font-bold text-2xl mb-2 truncate;
+}
+
+.app-product__image {
+  @apply h-80 overflow-hidden object-cover mb-2;
+}
+
+.app-product__description {
+  @apply my-2 text-gray-400;
+}
+
+.app-product__cta {
+  @apply py-2 px-4 text-center bg-white hover:text-purple-400;
+}
