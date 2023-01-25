@@ -9,7 +9,7 @@ import Link from 'next/link'
 type ProductPropsType = { product: Entry<ProductType> }
 
 export const Product = ({ product }: ProductPropsType) => {
-  const link = 'post/' + product.sys.id
+  const link = 'product/' + product.sys.id
   return (
     <Link href={link}>
       <div className="app-product">
