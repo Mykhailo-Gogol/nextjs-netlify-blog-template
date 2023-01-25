@@ -15,5 +15,5 @@
 }
 
 .app-review__points {
-  @apply inline-block p-1 px-2 bg-yellow-200 font-mono;
+  @apply flex py-2 text-emerald-400;
 }

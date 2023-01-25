@@ -9,7 +9,7 @@ import Link from 'next/link'
 type PostPropsType = { post: Entry<PostType> }
 
 export const Post = ({ post }: PostPropsType) => {
-  const link = 'post/' + post.fields.slug
+  const link = 'post/' + post.sys.id
   return (
     <Link href={link}>
       <div className="app-post">
